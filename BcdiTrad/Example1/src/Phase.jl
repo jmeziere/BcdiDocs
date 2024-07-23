@@ -29,7 +29,7 @@ function phase()
     end
     center * state
 
-    mov(a, "../results/recon.webm", fps=500)
+    mov(a, "../results/recon.webm", fps=250)
 end
 
 phase()
