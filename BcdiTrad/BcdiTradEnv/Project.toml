@@ -1,7 +1,5 @@
 [deps]
-BCDI = "b49559d6-be15-4dd0-8f91-0c0af40dc4aa"
 BcdiCore = "72eb6a3e-ca63-4742-b260-85b05ca6d9e4"
 BcdiTrad = "b788224a-5de6-46e5-9aeb-ad1a5171efd9"
-CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
