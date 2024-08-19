@@ -1,0 +1,5 @@
+[deps]
+BcdiCore = "72eb6a3e-ca63-4742-b260-85b05ca6d9e4"
+BcdiMeso = "1ffc817a-885e-4a73-a887-574cb954c7d7"
+BcdiTrad = "b788224a-5de6-46e5-9aeb-ad1a5171efd9"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
