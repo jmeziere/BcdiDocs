@@ -1,0 +1,45 @@
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 682.203638439 seconds (2615979832 bytes)
+Likelihood: 5.294277738987085e6
+
+Starting iteration 1
+Number of atoms: 6912
+
+Starting iteration 1
+Number of atoms: 6912
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 651.097604794 seconds (2512823968 bytes)
+Likelihood: 7.764583582379315e6
+
+Starting iteration 1
+Number of atoms: 6912
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 693.554796617 seconds (2672354744 bytes)
+Likelihood: 6.462879050539216e6
+
