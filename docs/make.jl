@@ -1,5 +1,6 @@
 using Documenter, BcdiCore, BcdiTrad, BcdiMeso
 println(pwd())
+println(readdir())
 makedocs(
     sitename="BcdiDocs",
     format = Documenter.HTML(
@@ -8,7 +9,7 @@ makedocs(
     pages = [
         "Julia BCDI"=>"index.md",
         "BcdiCore"=>[
-            "About/Installation"=>"../../BcdiCore.jl/docs/src/index.md",
+            "About/Installation"=>"BcdiCore.jl/docs/src/index.md",
             "Overview"=>"../../../BcdiCore.jl/docs/src/use/overview.md",
             "Atomic Models"=>"../../../BcdiCore.jl/docs/src/use/atomic.md",
             "Mesoscale Models"=>"../../../BcdiCore.jl/docs/src/use/meso.md",
