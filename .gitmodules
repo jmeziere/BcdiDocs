@@ -10,3 +10,15 @@
 [submodule "BcdiMeso.jl"]
 	path = BcdiMeso.jl
 	url = git@github.com:byu-cxi/BcdiMeso.jl.git
+[submodule "docs/src/BcdiMeso.jl"]
+	path = docs/src/BcdiMeso.jl
+	url = git@github.com:byu-cxi/BcdiMeso.jl.git
+[submodule "docs/src/BcdiTrad.jl"]
+	path = docs/src/BcdiTrad.jl
+	url = git@github.com:byu-cxi/BcdiTrad.jl.git
+[submodule "docs/src/BcdiCore.jl"]
+	path = docs/src/BcdiCore.jl
+	url = git@github.com:byu-cxi/BcdiCore.jl.git
+[submodule "docs/src/BcdiStrain.jl"]
+	path = docs/src/BcdiStrain.jl
+	url = git@github.com:byu-cxi/BcdiStrain.jl.git
