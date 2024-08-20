@@ -16,6 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@main
+        with:
+          repository: byu-cxi/BcdiCore.jl
+          path: ./docs/src/BcdiCore.jl
+      - uses: actions/checkout@main
+        with:
+          repository: byu-cxi/BcdiTrad.jl
+          path: ./docs/src/BcdiTrad.jl
+      - uses: actions/checkout@main
+        with:
+          repository: byu-cxi/BcdiMeso.jl
+          path: ./docs/src/BcdiMeso.jl
       - uses: julia-actions/setup-julia@v2
         with:
           version: '1.10'

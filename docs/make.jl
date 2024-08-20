@@ -1,6 +1,5 @@
 using Documenter, BcdiTrad, BcdiMeso
-println(pwd())
-println(readdir())
+
 makedocs(
     sitename="BcdiDocs",
     format = Documenter.HTML(
