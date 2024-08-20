@@ -37,7 +37,7 @@ jobs:
           version: '1.10'
       - uses: julia-actions/cache@v1
       - name: Install dependencies
-        run: julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter"]); Pkg.develop(path="docs/src/BcdiTrad.jl"); Pkg.develop(url="docs/src/BcdiStrain.jl"); Pkg.develop(path="docs/src/BcdiMeso.jl"); Pkg.instantiate()'
+        run: julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter"); Pkg.develop(path="docs/src/BcdiTrad.jl"); Pkg.develop(path="docs/src/BcdiStrain.jl"); Pkg.develop(path="docs/src/BcdiMeso.jl"); Pkg.instantiate()'
       - name: Build and deploy
         env:
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
