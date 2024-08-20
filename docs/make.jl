@@ -1,4 +1,4 @@
-using Documenter, BcdiCore, BcdiTrad, BcdiMeso
+using Documenter, BcdiTrad, BcdiMeso
 println(pwd())
 println(readdir())
 makedocs(
