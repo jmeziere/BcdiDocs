@@ -1,4 +1,6 @@
 using Documenter, BcdiTrad, BcdiMeso
+include("src/BcdiStrain.jl/docs/DummyDocs.jl")
+using .DummyDocs
 
 makedocs(
     sitename="BcdiDocs",
@@ -21,6 +23,7 @@ makedocs(
         ],
         "BcdiStrain"=>[
             "About/Installation"=>"BcdiStrain.jl/docs/src/index.md",
+            "Usage"=>"BcdiStrain.jl/docs/src/use.md"
         ],
         "BcdiMeso"=>[
             "About/Installation"=>"BcdiMeso.jl/docs/src/index.md",
