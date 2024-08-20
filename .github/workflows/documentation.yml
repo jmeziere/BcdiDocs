@@ -26,6 +26,10 @@ jobs:
           path: ./docs/src/BcdiTrad.jl
       - uses: actions/checkout@main
         with:
+          repository: byu-cxi/BcdiStrain.jl
+          path: ./docs/src/BcdiStrain.jl
+      - uses: actions/checkout@main
+        with:
           repository: byu-cxi/BcdiMeso.jl
           path: ./docs/src/BcdiMeso.jl
       - uses: julia-actions/setup-julia@v2
