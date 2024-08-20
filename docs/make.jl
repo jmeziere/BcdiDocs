@@ -1,6 +1,4 @@
-using Documenter, BcdiTrad, BcdiMeso
-include("src/BcdiStrain.jl/docs/DummyDocs.jl")
-using .DummyDocs
+using Documenter, BcdiTrad, BcdiStrain, BcdiMeso
 
 makedocs(
     sitename="BcdiDocs",
