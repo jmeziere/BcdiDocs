@@ -20,18 +20,22 @@ jobs:
         with:
           repository: byu-cxi/BcdiCore.jl
           path: ./docs/src/BcdiCore.jl
+          submodules: 'true'
       - uses: actions/checkout@main
         with:
           repository: byu-cxi/BcdiTrad.jl
           path: ./docs/src/BcdiTrad.jl
+          submodules: 'true'
       - uses: actions/checkout@main
         with:
           repository: byu-cxi/BcdiStrain.jl
           path: ./docs/src/BcdiStrain.jl
+          submodules: 'true'
       - uses: actions/checkout@main
         with:
           repository: byu-cxi/BcdiMeso.jl
           path: ./docs/src/BcdiMeso.jl
+          submodules: 'true'
       - uses: julia-actions/setup-julia@v2
         with:
           version: '1.10'
