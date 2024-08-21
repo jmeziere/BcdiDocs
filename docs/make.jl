@@ -30,9 +30,9 @@ makedocs(
     ],
     remotes = Dict(
         "src/BcdiCore.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiCore.jl.git")
-#        "src/BcdiTrad.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiTrad.jl.git"),
-#        "src/BcdiStrain.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiStrain.jl.git"),
-#        "src/BcdiMeso.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiMeso.jl.git")
+        "src/BcdiTrad.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiTrad.jl.git"),
+        "src/BcdiStrain.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiStrain.jl.git"),
+        "src/BcdiMeso.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiMeso.jl.git")
     )
 )
 
