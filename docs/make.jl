@@ -29,9 +29,9 @@ makedocs(
         ]
     ],
     remotes = Dict(
-        "BcdiCore.jl"=>GitHub("byu.cxi", "BcdiCore.jl")
-        "BcdiTrad.jl"=>GitHub("byu.cxi", "BcdiTrad.jl")
-        "BcdiStrain.jl"=>GitHub("byu.cxi", "BcdiStrain.jl")
+        "BcdiCore.jl"=>GitHub("byu.cxi", "BcdiCore.jl"),
+        "BcdiTrad.jl"=>GitHub("byu.cxi", "BcdiTrad.jl"),
+        "BcdiStrain.jl"=>GitHub("byu.cxi", "BcdiStrain.jl"),
         "BcdiMeso.jl"=>GitHub("byu.cxi", "BcdiMeso.jl")
     )
 )
