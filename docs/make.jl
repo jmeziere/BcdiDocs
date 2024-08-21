@@ -27,7 +27,13 @@ makedocs(
             "About/Installation"=>"BcdiMeso.jl/docs/src/index.md",
             "Usage"=>"BcdiMeso.jl/docs/src/use.md"
         ]
-    ]
+    ],
+    remotes = Dict(
+        "BcdiCore.jl"=>GitHub("byu.cxi", "BcdiCore.jl")
+        "BcdiTrad.jl"=>GitHub("byu.cxi", "BcdiTrad.jl")
+        "BcdiStrain.jl"=>GitHub("byu.cxi", "BcdiStrain.jl")
+        "BcdiMeso.jl"=>GitHub("byu.cxi", "BcdiMeso.jl")
+    )
 )
 
 deploydocs(
