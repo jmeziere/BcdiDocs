@@ -5,3 +5,11 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+  - package-ecosystem: gitsubmodule
+    schedule:
+      interval: "daily"
+    directories: 
+      - "docs/src/BcdiCore.jl"
+      - "docs/src/BcdiTrad.jl"
+      - "docs/src/BcdiStrain.jl"
+      - "docs/src/BcdiMeso.jl"
