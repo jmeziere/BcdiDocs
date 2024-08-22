@@ -17,7 +17,8 @@ makedocs(
         ],
         "BcdiTrad"=>[
             "About/Installation"=>"BcdiTrad.jl/docs/src/index.md",
-            "Usage"=>"BcdiTrad.jl/docs/src/use.md"
+            "Usage"=>"BcdiTrad.jl/docs/src/use.md",
+            "Examples"=>"BcdiTradExamples/examples.md"
         ],
         "BcdiStrain"=>[
             "About/Installation"=>"BcdiStrain.jl/docs/src/index.md",
