@@ -23,10 +23,12 @@ makedocs(
         "BcdiStrain"=>[
             "About/Installation"=>"BcdiStrain.jl/docs/src/index.md",
             "Usage"=>"BcdiStrain.jl/docs/src/use.md"
+            "Examples"=>"BcdiStrainExamples/examples.md"
         ],
         "BcdiMeso"=>[
             "About/Installation"=>"BcdiMeso.jl/docs/src/index.md",
             "Usage"=>"BcdiMeso.jl/docs/src/use.md"
+            "Examples"=>"BcdiMesoExamples/examples.md"
         ]
     ],
     remotes = Dict(
