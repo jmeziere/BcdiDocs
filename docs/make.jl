@@ -1,4 +1,4 @@
-using Documenter, DocumenterCitations, BcdiTrad, BcdiStrain, BcdiMeso
+using Documenter, DocumenterCitations, BcdiTrad, BcdiStrain, BcdiMeso, BcdiSimulate
 
 inEntry = false
 newEntry = true
@@ -97,7 +97,7 @@ makedocs(
         "src/BcdiCore.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiCore.jl.git"),
         "src/BcdiTrad.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiTrad.jl.git"),
         "src/BcdiStrain.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiStrain.jl.git"),
-        "src/BcdiMeso.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiMeso.jl.git")
+        "src/BcdiMeso.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiMeso.jl.git"),
         "src/BcdiSimulate.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiSimulate.jl.git")
     ),
     plugins = [bib]
