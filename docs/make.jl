@@ -101,7 +101,8 @@ makedocs(
         "src/BcdiMeso.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiMeso.jl.git"),
         "src/BcdiSimulate.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiSimulate.jl.git")
     ),
-    plugins = [bib]
+    plugins = [bib],
+    pagesonly = true
 )
 
 deploydocs(
