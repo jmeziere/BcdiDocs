@@ -45,7 +45,7 @@ for filename in inBibFiles
         end
     end
 end
-
+println(keys(entryDict))
 open(outBibFile,"w") do fout
     for k in keys(entryDict)
         for line in entryDict[k]
