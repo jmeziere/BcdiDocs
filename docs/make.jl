@@ -33,19 +33,20 @@ for filename in inBibFiles
                     newEntry = true
                 end
                 entry = String[line]
-            elseif inEntry == true && newEntry
+            elseif inEntry == true
                 if strip(line, [' ','\n']) == "}"
-                   push!(entry, line)
-                   entryDict[entryName] = entry
+                   if newEntry
+                       push!(entry, line)
+                       entryDict[entryName] = entry
+                   end
                    inEntry = false
-                else
+                elseif newEntry
                    push!(entry, line)
                 end
             end
         end
     end
 end
-println(keys(entryDict))
 open(outBibFile,"w") do fout
     for k in keys(entryDict)
         for line in entryDict[k]
