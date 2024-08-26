@@ -11,6 +11,7 @@ inBibFiles = [
     "docs/src/BcdiTrad.jl/docs/src/refs.bib"
     "docs/src/BcdiStrain.jl/docs/src/refs.bib"
     "docs/src/BcdiMeso.jl/docs/src/refs.bib"
+    "docs/src/BcdiSimulate.jl/docs/src/refs.bib"
 ]
 outBibFile = "docs/src/refs.bib"
 for filename in inBibFiles
@@ -85,13 +86,19 @@ makedocs(
             "About/Installation"=>"BcdiMeso.jl/docs/src/index.md",
             "Usage"=>"BcdiMeso.jl/docs/src/use.md",
             "Examples"=>"BcdiMesoExamples/examples.md"
-        ]
+        ],
+        "BcdiSimulate"=>[
+            "About/Installation"=>"BcdiSimulate.jl/docs/src/index.md",
+            "Atomic Simulation"=>"BcdiSimulate.jl/docs/src/usage/atom.md"
+        ],
+        "References"=>"refs.md"
     ],
     remotes = Dict(
         "src/BcdiCore.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiCore.jl.git"),
         "src/BcdiTrad.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiTrad.jl.git"),
         "src/BcdiStrain.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiStrain.jl.git"),
         "src/BcdiMeso.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiMeso.jl.git")
+        "src/BcdiSimulate.jl"=>Documenter.Remotes.GitHub("byu-cxi", "BcdiSimulate.jl.git")
     ),
     plugins = [bib]
 )

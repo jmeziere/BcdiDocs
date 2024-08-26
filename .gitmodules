@@ -10,3 +10,6 @@
 [submodule "docs/src/BcdiMeso.jl"]
 	path = docs/src/BcdiMeso.jl
 	url = git@github.com:byu-cxi/BcdiMeso.jl.git
+[submodule "docs/src/BcdiSimulate.jl"]
+	path = docs/src/BcdiSimulate.jl
+	url = https://github.com/byu-cxi/BcdiSimulate.jl.git
