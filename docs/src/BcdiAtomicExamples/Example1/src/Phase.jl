@@ -29,10 +29,10 @@ function simulateDiffraction()
 #        "-pk","gpu","1"
     ]
 
-    numPhotons = 1e12
+    numPhotons = [1e12,1e12,1e12]
 
     BcdiSimulate.relaxCrystal(x, y, z, lammpsOptions, "../data/Au_Zhou04.eam.alloy Au")
-    intens, recSupport, Gs, boxSize = BcdiSimulate.simulateDiffraction(x, y, z, hRanges, kRanges, lRanges, numPhotons)
+    intens, recSupport, Gs, boxSize = BcdiSimulate.atomSimulateDiffraction(x, y, z, hRanges, kRanges, lRanges, numPhotons)
     return round(Int32, 0.9*length(x)), round(Int32, 1.1*length(x)), intens, recSupport, Gs, boxSize
 end
 
@@ -60,4 +60,4 @@ function Phase(minAtom, maxAtom, intens, recSupport, Gs, boxSize)
 end
 
 minAtom, maxAtom, intens, recSupport, Gs, boxSize = simulateDiffraction()
-Phase(minAtom, maxAtom, intens, recSupport, Gs, boxSize)
+Phase(5000,10000, intens, recSupport, Gs, boxSize)

@@ -1,105 +1,98 @@
-using BcdiCore
-using BcdiStrain
 using BcdiMeso
+using CUDA
+using BcdiSimulate
 using Plots
+using Statistics
 using FFTW
-using LinearAlgebra
 
-function saveAn(rho, ux, uy, uz, inSupp, plotArr, a)
-    plotArr[inSupp] .= Array(rho)
-    p1 = heatmap(plotArr[50,:,:])
-    plotArr[inSupp] .= Array(ux)
-    p2 = heatmap(plotArr[50,:,:])
-    plotArr[inSupp] .= Array(uy)
-    p3 = heatmap(plotArr[50,:,:])
-    plotArr[inSupp] .= Array(uz)
-    p4 = heatmap(plotArr[50,:,:])
-    frame(a, plot(p1,p2,p3,p4,layout=4))
+function saveAn(state, a)
+    p1 = heatmap(fftshift(Array(reshape(state.rho,100,100,100))[1,:,:]))
+    p2 = heatmap(fftshift(Array(reshape(state.ux,100,100,100))[1,:,:]))
+    p3 = heatmap(fftshift(Array(reshape(state.uy,100,100,100))[1,:,:]))
+    p4 = heatmap(fftshift(Array(reshape(state.uz,100,100,100))[1,:,:]))
+    frame(a, plot(p1,p2,p3,p4,layout=4,size=(600,400)))
 end
 
-function phase()
-    intens = Array{Float64, 3}[]
-    gVecs = [[-1.,1,1],[1.,-1,1],[1.,1,-1]]
-    primLatt = [-1. 1 1 ; 1 -1 1; 1 1 -1]
-    for i in 1:3
-        push!(intens, round.(Int64, reshape(parse.(Float64, split(readlines("../data/intensities$(i).txt")[1], ",")), 100, 100, 100)))
-    end
-    recSupport = [trues(size(intens[1])) for i in 1:length(intens)]
+function simulateDiffraction()
+    hRanges = [
+        range(0.25-0.03,0.25-0.03+100*0.06/101,100),
+        range(0.25-0.03,0.25-0.03+100*0.06/101,100),
+        range(-0.25-0.03,-0.25-0.03+100*0.06/101,100)
+    ]
+    kRanges = [
+        range(0.25-0.03,0.25-0.03+100*0.06/101,100),
+        range(-0.25-0.03,-0.25-0.03+100*0.06/101,100),
+        range(-0.25-0.03,-0.25-0.03+100*0.06/101,100)
+    ]
+    lRanges = [
+        range(-0.25-0.03,-0.25-0.03+100*0.06/101,100),
+        range(0.25-0.03,0.25-0.03+100*0.06/101,100),
+        range(-0.25-0.03,-0.25-0.03+100*0.06/101,100)
+    ]
+    rotations = [
+        [1. 0 0 ; 0 1 0 ; 0 0 1],
+        [1. 0 0 ; 0 1 0 ; 0 0 1],
+        [1. 0 0 ; 0 1 0 ; 0 0 1]
+    ]
 
-    strainState = BcdiStrain.State(intens, gVecs, recSupport)
-    er = BcdiStrain.ER()
-    hio = BcdiStrain.HIO(0.9)
-    shrink = BcdiStrain.Shrink(0.1, 1.0, strainState)
-    center = BcdiStrain.Center(strainState)
-    mount = BcdiStrain.Mount(0.5, strainState, primLatt)
+    x = parse.(Float64, readlines("../data/xvals.csv"))
+    x .-= mean(x)
+    x = Float32.(x)
+    y = parse.(Float64, readlines("../data/yvals.csv"))
+    y .-= mean(y)
+    y = Float32.(y)
+    z = parse.(Float64, readlines("../data/zvals.csv"))
+    z .-= mean(z)
+    z = Float32.(z)
+
+    lammpsOptions = [
+        "-screen","none",
+        "-log","none",
+        "-sf","gpu",
+        "-pk","gpu","1","neigh","no"
+    ]
+
+    numPhotons = [1e12,1e12,1e12]
+
+#    BcdiSimulate.relaxCrystal(x, y, z, lammpsOptions, "../data/Au_Zhou04.eam.alloy Au")
+    x = Float64.(x)
+    y = Float64.(y)
+    z = Float64.(z)
+    intens, recSupport, GCens, GMaxs, boxSize = BcdiSimulate.atomSimulateDiffraction(x, y, z, hRanges, kRanges, lRanges, rotations, numPhotons)
+
+    recPrimLatt = zeros(3,3)
+    for i in 1:3
+        GMaxs[i] .*= boxSize
+        recPrimLatt[i,:] .= GMaxs[i]
+    end
+    return intens, recSupport, GMaxs, recPrimLatt, rotations
+end
+
+function phase(intens, recSupport, gVecs, recPrimLatt, rotations)
+    state = BcdiMeso.State(intens, gVecs, recSupport)
 
     a = Animation()
     # We could run the commands this way, but we want to plot in the middle
-    (mount * center * er^20)^200 * 
-    (mount * center * (shrink * hio)^80)^80 * strainState
+    # (mount * center * er^20)^200 * 
+    # (mount * center * (shrink * hio)^80)^20 * state
 
-    A = zeros(3,3)
-    for i in 1:3
-        _, _, peakLoc = BcdiCore.centerPeak(intens[i], recSupport[i], "corner")
-        peakLoc = collect(peakLoc) .+ [1,1,1]
-        peakLoc = Int64.(peakLoc)
-        h = reshape(parse.(Float64, split(readlines("../data/h$(i).txt")[1], ",")), 100, 100, 100)
-        k = reshape(parse.(Float64, split(readlines("../data/k$(i).txt")[1], ",")), 100, 100, 100)
-        l = reshape(parse.(Float64, split(readlines("../data/l$(i).txt")[1], ",")), 100, 100, 100)
-        peak = [h[peakLoc...],k[peakLoc...],l[peakLoc...]]
-        peak ./= [h[1,1,2]-h[1,1,1],k[1,2,1]-k[1,1,1],l[2,1,1]-l[1,1,1]]
-        gVecs[i] .= peak
-        A[i,:] .= peak
+    mrbcdis = []
+    push!(mrbcdis, BcdiMeso.MRBCDI(state, recPrimLatt, 1, 100, 1, 1, 0.25, 1, -1, 1e-8))
+    push!(mrbcdis, BcdiMeso.MRBCDI(state, recPrimLatt, 3, 100, 1, 1, 0.25, 1, -1, 1e-8))
+    push!(mrbcdis, BcdiMeso.MRBCDI(state, recPrimLatt, 3, 100, 1, 0, 0.25, 1, -1, 1e-8))
+    iters = [10,25,1] 
+ 
+    for i in 1:length(mrbcdis)
+        for j in 1:iters[i]
+            println(j)
+            mrbcdis[i] * state
+            saveAn(state, a)
+        end
     end
 
-    inSupp = Array(findall(fftshift(strainState.traditionals[1].support)))
-    B = zeros(3, reduce(+, strainState.traditionals[1].support))
-    B[1,:] .= Array(-fftshift(strainState.ux)[inSupp] .+ fftshift(strainState.uy)[inSupp] .+ fftshift(strainState.uz)[inSupp])
-    B[2,:] .= Array(fftshift(strainState.ux)[inSupp] .- fftshift(strainState.uy)[inSupp] .+ fftshift(strainState.uz)[inSupp])
-    B[3,:] .= Array(fftshift(strainState.ux)[inSupp] .+ fftshift(strainState.uy)[inSupp] .- fftshift(strainState.uz)[inSupp])
-   
-    s = size(intens[1])
-    x = zeros(length(inSupp))
-    y = zeros(length(inSupp))
-    z = zeros(length(inSupp))
-    for i in 1:length(inSupp)
-        x[i] = 2*pi*(inSupp[i][1]-1)/s[1]
-        y[i] = 2*pi*(inSupp[i][2]-1)/s[2]
-        z[i] = 2*pi*(inSupp[i][3]-1)/s[3]
-    end
-
-    newStrain = A \ B
-
-    support = strainState.traditionals[1].support
-    plotArr = zeros(size(support))
-    rho = Array(fftshift(strainState.rho)[inSupp])
-    ux = -newStrain[1,:]
-    uy = -newStrain[2,:]
-    uz = -newStrain[3,:]
-
-    mesoState = BcdiMeso.State(
-        intens, gVecs, recSupport, x, y, z, 
-        Array(fftshift(strainState.rho)[inSupp]), 
-        newStrain[1,:], newStrain[2,:], newStrain[3,:]
-    )
-    optimizeState1 = BcdiMeso.OptimizeState(mesoState, primLatt, 1)
-    optimizeState2 = BcdiMeso.OptimizeState(mesoState, primLatt, 2)
-    optimizeState3 = BcdiMeso.OptimizeState(mesoState, primLatt, 3)
-
-    for i in 1:100
-        saveAn(mesoState.rho, mesoState.ux, mesoState.uy, mesoState.uz, inSupp, plotArr, a)
-        optimizeState1 * mesoState
-    end
-    for j in 1:100
-        saveAn(mesoState.rho, mesoState.ux, mesoState.uy, mesoState.uz, inSupp, plotArr, a)
-        optimizeState2 * mesoState
-    end
-    for k in 1:100
-        saveAn(mesoState.rho, mesoState.ux, mesoState.uy, mesoState.uz, inSupp, plotArr, a)
-        optimizeState3 * mesoState
-    end
-
-    mov(a, "../results/recon.webm", fps=250)
+    saveAn(state, a)
+    mov(a, "../results/recon.webm", fps=10)
 end
 
-phase()
+intens, recSupport, GMaxs, recPrimLatt, rotations = simulateDiffraction()
+phase(intens, recSupport, GMaxs, recPrimLatt, rotations)

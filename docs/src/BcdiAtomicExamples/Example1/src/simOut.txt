@@ -1,45 +1,540 @@
-Starting iteration 1
-Number of atoms: 6912
+Cross Validation
+Time (Allocations): 114.959455388 seconds (1118503136 bytes)
+Likelihood: 5.927405552923672e6
+Number Added: 568
+Number Removed: 821
 
-Starting iteration 1
-Number of atoms: 6912
+Ending Iteration
 
-Starting iteration 1
-Number of atoms: 6912
-
-Starting iteration 1
-Number of atoms: 6912
-
-Starting iteration 1
-Number of atoms: 6912
-
-Starting iteration 1
-Number of atoms: 6912
-
-Starting iteration 1
-Number of atoms: 6912
-
-Starting iteration 1
-Number of atoms: 6912
+Starting iteration 2
+Number of atoms: 5071
 
 Maximize Likelihood and Minimize Energy
-Time (Allocations): 682.203638439 seconds (2615979832 bytes)
-Likelihood: 5.294277738987085e6
+Time (Allocations): 28.880786523 seconds (14902472 bytes)
+Likelihood: 4.825820499109704e6
 
-Starting iteration 1
-Number of atoms: 6912
+Cross Validation
+Time (Allocations): 130.140620078 seconds (126065136 bytes)
+Likelihood: 4.33957435769635e6
+Number Added: 117
+Number Removed: 188
 
-Starting iteration 1
-Number of atoms: 6912
+Ending Iteration
 
-Maximize Likelihood and Minimize Energy
-Time (Allocations): 651.097604794 seconds (2512823968 bytes)
-Likelihood: 7.764583582379315e6
-
-Starting iteration 1
-Number of atoms: 6912
+Starting iteration 3
+Number of atoms: 5000
 
 Maximize Likelihood and Minimize Energy
-Time (Allocations): 693.554796617 seconds (2672354744 bytes)
-Likelihood: 6.462879050539216e6
+Time (Allocations): 33.861045212 seconds (14900808 bytes)
+Likelihood: 4.291144466313207e6
+
+Cross Validation
+Time (Allocations): 132.412763648 seconds (96812224 bytes)
+Likelihood: 3.9675007352595376e6
+Number Added: 119
+Number Removed: 119
+
+Ending Iteration
+
+Starting iteration 4
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 26.510741603 seconds (14883512 bytes)
+Likelihood: 4.250140699422255e6
+
+Cross Validation
+Time (Allocations): 72.031461387 seconds (59266832 bytes)
+Likelihood: 3.9773728556941906e6
+Number Added: 71
+Number Removed: 71
+
+Ending Iteration
+
+Starting iteration 5
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 21.383208985 seconds (15260856 bytes)
+Likelihood: 3.930730716359717e6
+
+Cross Validation
+Time (Allocations): 107.367859894 seconds (76851232 bytes)
+Likelihood: 3.6733555191092743e6
+Number Added: 96
+Number Removed: 82
+
+Ending Iteration
+
+Starting iteration 6
+Number of atoms: 5014
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 27.389180116 seconds (14921464 bytes)
+Likelihood: 3.8902906620417736e6
+
+Cross Validation
+Time (Allocations): 83.021866317 seconds (67511920 bytes)
+Likelihood: 3.6205337602455886e6
+Number Added: 87
+Number Removed: 80
+
+Ending Iteration
+
+Starting iteration 7
+Number of atoms: 5021
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 23.471720213 seconds (15609720 bytes)
+Likelihood: 3.776276360053947e6
+
+Cross Validation
+Time (Allocations): 62.065812534 seconds (48524056 bytes)
+Likelihood: 3.5551079625700205e6
+Number Added: 47
+Number Removed: 66
+
+Ending Iteration
+
+Starting iteration 8
+Number of atoms: 5002
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 25.972372227 seconds (14198008 bytes)
+Likelihood: 3.7088633044947013e6
+
+Cross Validation
+Time (Allocations): 63.888814529 seconds (52464016 bytes)
+Likelihood: 3.516456466174784e6
+Number Added: 62
+Number Removed: 64
+
+Ending Iteration
+
+Starting iteration 9
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 18.330701048 seconds (14115016 bytes)
+Likelihood: 3.762880356027558e6
+
+Cross Validation
+Time (Allocations): 67.501719066 seconds (59727824 bytes)
+Likelihood: 3.49782373826476e6
+Number Added: 77
+Number Removed: 77
+
+Ending Iteration
+
+Starting iteration 10
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 23.229887719 seconds (15260536 bytes)
+Likelihood: 3.6843076334436443e6
+
+Cross Validation
+Time (Allocations): 80.168954187 seconds (66561952 bytes)
+Likelihood: 3.4617868060452417e6
+Number Added: 78
+Number Removed: 76
+
+Ending Iteration
+
+Starting iteration 11
+Number of atoms: 5002
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 23.155972132 seconds (15278520 bytes)
+Likelihood: 3.721036237704309e6
+
+Cross Validation
+Time (Allocations): 58.169500414 seconds (46812432 bytes)
+Likelihood: 3.534487126377814e6
+Number Added: 55
+Number Removed: 57
+
+Ending Iteration
+
+Starting iteration 12
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 21.196421305 seconds (15244472 bytes)
+Likelihood: 3.7336597416215395e6
+
+Cross Validation
+Time (Allocations): 77.993103494 seconds (67731776 bytes)
+Likelihood: 3.4890170506908917e6
+Number Added: 86
+Number Removed: 86
+
+Ending Iteration
+
+Starting iteration 13
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 18.992460843 seconds (15243896 bytes)
+Likelihood: 3.705397281119246e6
+
+Cross Validation
+Time (Allocations): 66.379063735 seconds (72055072 bytes)
+Likelihood: 3.4333648298923117e6
+Number Added: 101
+Number Removed: 77
+
+Ending Iteration
+
+Starting iteration 14
+Number of atoms: 5024
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 25.506378123 seconds (15267064 bytes)
+Likelihood: 3.529705279840642e6
+
+Cross Validation
+Time (Allocations): 83.842764813 seconds (64179056 bytes)
+Likelihood: 3.3173458837950183e6
+Number Added: 78
+Number Removed: 70
+
+Ending Iteration
+
+Starting iteration 15
+Number of atoms: 5032
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 34.071022327 seconds (15612456 bytes)
+Likelihood: 3.4928189162587896e6
+
+Cross Validation
+Time (Allocations): 57.081032816 seconds (70304496 bytes)
+Likelihood: 3.2987275269762035e6
+Number Added: 66
+Number Removed: 93
+
+Ending Iteration
+
+Starting iteration 16
+Number of atoms: 5005
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 21.083274758 seconds (15605656 bytes)
+Likelihood: 3.5130801719462946e6
+
+Cross Validation
+Time (Allocations): 76.46842299 seconds (83224144 bytes)
+Likelihood: 3.271204737692456e6
+Number Added: 89
+Number Removed: 94
+
+Ending Iteration
+
+Starting iteration 17
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 23.697048607 seconds (15604120 bytes)
+Likelihood: 3.4636145299443807e6
+
+Cross Validation
+Time (Allocations): 73.249630549 seconds (40684272 bytes)
+Likelihood: 3.308057344685006e6
+Number Added: 45
+Number Removed: 45
+
+Ending Iteration
+
+Starting iteration 18
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 30.333034616 seconds (15242968 bytes)
+Likelihood: 3.473084791263045e6
+
+Cross Validation
+Time (Allocations): 77.757891982 seconds (61932688 bytes)
+Likelihood: 3.265390603705153e6
+Number Added: 73
+Number Removed: 73
+
+Ending Iteration
+
+Starting iteration 19
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 22.81729487 seconds (15260552 bytes)
+Likelihood: 3.41272389415625e6
+
+Cross Validation
+Time (Allocations): 58.405885341 seconds (75424112 bytes)
+Likelihood: 3.161449796080456e6
+Number Added: 102
+Number Removed: 71
+
+Ending Iteration
+
+Starting iteration 20
+Number of atoms: 5031
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 21.511085979 seconds (15252376 bytes)
+Likelihood: 3.164868079946071e6
+
+Cross Validation
+Time (Allocations): 61.869326653 seconds (49266848 bytes)
+Likelihood: 3.0409445696135545e6
+Number Added: 38
+Number Removed: 51
+
+Ending Iteration
+
+Starting iteration 21
+Number of atoms: 5018
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 19.857948298 seconds (15265912 bytes)
+Likelihood: 3.138602443197191e6
+
+Cross Validation
+Time (Allocations): 76.122945977 seconds (49361008 bytes)
+Likelihood: 3.02112574084879e6
+Number Added: 43
+Number Removed: 48
+
+Ending Iteration
+
+Starting iteration 22
+Number of atoms: 5013
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 19.716550243 seconds (14920424 bytes)
+Likelihood: 3.1547541607740643e6
+
+Cross Validation
+Time (Allocations): 87.617438063 seconds (48907184 bytes)
+Likelihood: 3.0103928524648435e6
+Number Added: 47
+Number Removed: 60
+
+Ending Iteration
+
+Starting iteration 23
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 22.666630923 seconds (14884664 bytes)
+Likelihood: 3.6007910486301314e6
+
+Cross Validation
+Time (Allocations): 58.307844058 seconds (64762384 bytes)
+Likelihood: 3.3231075743333483e6
+Number Added: 82
+Number Removed: 82
+
+Ending Iteration
+
+Starting iteration 24
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 18.648561425 seconds (15604280 bytes)
+Likelihood: 3.3195388239708934e6
+
+Cross Validation
+Time (Allocations): 66.50819492 seconds (80291904 bytes)
+Likelihood: 3.1242059699033536e6
+Number Added: 93
+Number Removed: 94
+
+Ending Iteration
+
+Starting iteration 25
+Number of atoms: 4999
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 22.763042315 seconds (15603976 bytes)
+Likelihood: 3.2949558876014017e6
+
+Cross Validation
+Time (Allocations): 58.498562688 seconds (46566440 bytes)
+Likelihood: 3.144975793142624e6
+Number Added: 55
+Number Removed: 52
+
+Ending Iteration
+
+Starting iteration 26
+Number of atoms: 5002
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 31.933807193 seconds (15261112 bytes)
+Likelihood: 3.341104568478549e6
+
+Cross Validation
+Time (Allocations): 76.622393343 seconds (38650832 bytes)
+Likelihood: 3.1646005844179727e6
+Number Added: 43
+Number Removed: 45
+
+Ending Iteration
+
+Starting iteration 27
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 22.571042175 seconds (15260552 bytes)
+Likelihood: 3.3544057154756864e6
+
+Cross Validation
+Time (Allocations): 58.156482572 seconds (44949440 bytes)
+Likelihood: 3.1908410424156515e6
+Number Added: 50
+Number Removed: 50
+
+Ending Iteration
+
+Starting iteration 28
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 27.510270983 seconds (14916968 bytes)
+Likelihood: 3.0614669506179104e6
+
+Cross Validation
+Time (Allocations): 50.080160285 seconds (31264016 bytes)
+Likelihood: 2.950483634867415e6
+Number Added: 32
+Number Removed: 32
+
+Ending Iteration
+
+Starting iteration 29
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 17.238752508 seconds (15603352 bytes)
+Likelihood: 3.280437134545684e6
+
+Cross Validation
+Time (Allocations): 72.843621458 seconds (45011376 bytes)
+Likelihood: 3.103662376343175e6
+Number Added: 46
+Number Removed: 47
+
+Ending Iteration
+
+Starting iteration 30
+Number of atoms: 4999
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 25.240979225 seconds (15603896 bytes)
+Likelihood: 3.411244055843111e6
+
+Cross Validation
+Time (Allocations): 52.241431478 seconds (31896592 bytes)
+Likelihood: 3.278171975803514e6
+Number Added: 33
+Number Removed: 33
+
+Ending Iteration
+
+Starting iteration 31
+Number of atoms: 4999
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 21.100884414 seconds (15603768 bytes)
+Likelihood: 3.0746680410764264e6
+
+Cross Validation
+Time (Allocations): 73.749105385 seconds (48354928 bytes)
+Likelihood: 2.958187166659009e6
+Number Added: 54
+Number Removed: 41
+
+Ending Iteration
+
+Starting iteration 32
+Number of atoms: 5012
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 22.076972273 seconds (15280728 bytes)
+Likelihood: 3.0912546270916127e6
+
+Cross Validation
+Time (Allocations): 57.887576908 seconds (37835568 bytes)
+Likelihood: 2.9780099774432234e6
+Number Added: 30
+Number Removed: 42
+
+Ending Iteration
+
+Starting iteration 33
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 22.654201738 seconds (15603704 bytes)
+Likelihood: 3.117218318529849e6
+
+Cross Validation
+Time (Allocations): 43.795300669 seconds (35089920 bytes)
+Likelihood: 2.998979654606412e6
+Number Added: 33
+Number Removed: 30
+
+Ending Iteration
+
+Starting iteration 34
+Number of atoms: 5003
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 21.457141873 seconds (15605448 bytes)
+Likelihood: 3.0922696736253183e6
+
+Cross Validation
+Time (Allocations): 62.636330999 seconds (56099936 bytes)
+Likelihood: 2.9562048361793105e6
+Number Added: 54
+Number Removed: 57
+
+Ending Iteration
+
+Starting iteration 35
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 25.017629567 seconds (15260248 bytes)
+Likelihood: 3.0300888883668077e6
+
+Cross Validation
+Time (Allocations): 53.679929122 seconds (28724944 bytes)
+Likelihood: 2.9275387962954137e6
+Number Added: 28
+Number Removed: 28
+
+Ending Iteration
+
+Starting iteration 36
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 20.367375668 seconds (14917224 bytes)
+Likelihood: 2.9643975565841855e6
+
+Cross Validation
+Time (Allocations): 67.826672472 seconds (23473200 bytes)
+Likelihood: 2.890099609189509e6
+Number Added: 22
+Number Removed: 22
+
+Ending Iteration
+
+Starting iteration 37
+Number of atoms: 5000
+
+Maximize Likelihood and Minimize Energy
+Time (Allocations): 14.360983657 seconds (14573464 bytes)
+Likelihood: 3.123828416125672e6
 
